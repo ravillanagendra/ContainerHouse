@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public enum ZoomMode
 {
@@ -66,6 +67,7 @@ public class CameraMotionControls : MonoBehaviour
 
     private void Update()
     {
+        if(!EventSystem.current.IsPointerOverGameObject())
         Zoom();
     }
 
